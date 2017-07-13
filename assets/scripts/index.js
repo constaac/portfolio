@@ -3,11 +3,21 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 
+// require('./emailjs.min.js')
+
 $(() => {
   setAPIOrigin(location, config)
+
+  emailjs.init("user_LkXIhIDN1aKHEostEfnys")
+  emailjs.send("gmail", "my_template", {"message_html":"Testing this out","from_name":"Mike","from_email":"mike@email.com","phone":"1234567898"})
+    .then(function(response) {
+      console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+    }, function (err) {
+      console.log("FAILED. error=", err);
+    });
 })
 
-$('a[href*="#"]').click(function (event) {
+$('a[href*="#"]').click(function(event) {
   if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
     let target = $(this.hash)
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
@@ -15,7 +25,7 @@ $('a[href*="#"]').click(function (event) {
       event.preventDefault()
       $('html, body').animate({
         scrollTop: target.offset().top
-      }, 1000, function () {
+      }, 1000, function() {
         const $target = $(target)
         $target.focus()
         if ($target.is(':focus')) {
