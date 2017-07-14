@@ -52,10 +52,8 @@ const sendEmail = function (data) {
     'my_template',
     data
   ).then(function (response) {
-    console.log('SUCCESS. status=%d, text=%s', response.status, response.text)
     ui.emailSendSuccess()
   }, function (err) {
-    console.log('FAILED. error=', err)
     ui.emailSendFailure('<strong>Sorry, it seems that my mail server is not responding. Please try again later!')
   })
 }
