@@ -18,8 +18,7 @@ const emailSendSuccess = function (response) {
       .append('</div>')
 
   // Reset Captcha
-  // grecaptcha.reset()
-  Recaptcha.reload()
+  grecaptcha.reload()
 
   // clear all fields
   $('#contactForm').trigger('reset')
