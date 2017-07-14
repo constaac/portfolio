@@ -24,7 +24,7 @@ const checkEmail = function () {
 }
 
 const checkCaptcha = function () {
-  if (Recaptcha.getResponse().length === 0) {
+  if (grecaptcha.getResponse().length === 0) {
     console.log('empty captcha')
   } else {
     console.log('checked captcha')
