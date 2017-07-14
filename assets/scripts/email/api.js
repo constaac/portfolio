@@ -33,13 +33,13 @@ const checkCaptcha = function () {
 }
 
 const sendEmail = function (data) {
-  if (checkCaptcha()) {
-    return
-  }
   if (checkEmail()) {
     return
   }
   if (checkEmptyFields()) {
+    return
+  }
+  if (checkCaptcha()) {
     return
   }
   $('#success').html("<div class='alert'>")
