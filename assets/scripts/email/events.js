@@ -5,8 +5,8 @@ const api = require('./api.js')
 
 const onEmailSubmit = function (event) {
   event.preventDefault()
+  $('#btnSubmit').attr('disabled', true)
   const data = getFormFields(event.target)
-  console.log(data)
   api.sendEmail(data)
 }
 

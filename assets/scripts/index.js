@@ -7,8 +7,6 @@ const emailEvents = require('./email/events.js')
 const uiFeatures = require('./features/ui.js')
 // const emailAPI = require('./email/api.js')
 
-require('./jqBootstrapValidation.js')
-
 $(() => {
   setAPIOrigin(location, config)
 

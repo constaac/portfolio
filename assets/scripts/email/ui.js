@@ -2,7 +2,6 @@
 
 const emailSendSuccess = function (response) {
   // Enable button & show success message
-  $('#btnSubmit').attr('disabled', false)
   $('#success').html("<div class='alert alert-success'>")
   $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times")
       .append('</button>')
@@ -14,6 +13,7 @@ const emailSendSuccess = function (response) {
   // clear all fields
   $('#contactForm').trigger('reset')
   $('.floating-label-form-group').removeClass('floating-label-form-group-with-value')
+  $('#btnSubmit').attr('disabled', false)
 }
 
 const emailSendFailure = function (response) {
@@ -26,9 +26,25 @@ const emailSendFailure = function (response) {
   // clear all fields
   $('#contactForm').trigger('reset')
   $('.floating-label-form-group').removeClass('floating-label-form-group-with-value')
+  $('#btnSubmit').attr('disabled', false)
+}
+
+const errorMessage = function (message) {
+  $('#success').html("<div class='alert'>")
+  $('.alert').css('color', 'red')
+  $('#success > .alert')
+      .append('<strong>' + message + '</strong>')
+  $('#success > .alert')
+      .append('</div>')
+  setTimeout(function () {
+    $('#success').html('')
+    $('#btnSubmit').attr('disabled', false)
+    $('.alert').css('color', 'black')
+  }, 3000)
 }
 
 module.exports = {
   emailSendSuccess,
-  emailSendFailure
+  emailSendFailure,
+  errorMessage
 }
