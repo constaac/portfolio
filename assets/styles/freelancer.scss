@@ -305,17 +305,19 @@ footer .footer-below {
   color: white;
   font-size: 20px;
   border: solid 2px white;
-  background: transparent;
+  background: #8BB8E4;
   transition: all 0.3s ease-in-out;
   margin-top: 15px;
 }
 .btn-outline:hover,
-.btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-  color: #8BB8E4;
-  background: white;
+  color: white;
+  background: #2C3E50;
   border: solid 2px white;
+}
+.btn-outline:focus {
+  color: white;
 }
 .btn-primary {
   color: white;
