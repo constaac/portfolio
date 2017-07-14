@@ -23,7 +23,17 @@ const checkEmail = function () {
   }
 }
 
+const checkCaptcha = function () {
+  if (Recaptcha.getResponse().length === 0) {
+    console.log('empty captcha')
+  } else {
+    console.log('checked captcha')
+  }
+}
+
 const sendEmail = function (data) {
+  checkCaptcha()
+  return
   if (checkEmail()) {
     return
   }
