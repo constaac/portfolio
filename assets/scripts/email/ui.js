@@ -10,6 +10,9 @@ const emailSendSuccess = function (response) {
   $('#success > .alert-success')
       .append('</div>')
 
+  // Reset Captcha
+  grecaptcha.reset()
+
   // clear all fields
   $('#contactForm').trigger('reset')
   $('.floating-label-form-group').removeClass('floating-label-form-group-with-value')
