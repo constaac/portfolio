@@ -25,15 +25,17 @@ const checkEmail = function () {
 
 const checkCaptcha = function () {
   if (grecaptcha.getResponse().length === 0) {
-    console.log('empty captcha')
+    ui.errorMessage('You must verify your humanity!')
+    return true
   } else {
-    console.log('checked captcha')
+    return false
   }
 }
 
 const sendEmail = function (data) {
-  checkCaptcha()
-  return
+  if (checkCaptcha()) {
+    return
+  }
   if (checkEmail()) {
     return
   }
