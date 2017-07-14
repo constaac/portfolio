@@ -44,7 +44,7 @@ const sendEmail = function (data) {
     ui.emailSendSuccess()
   }, function (err) {
     console.log('FAILED. error=', err)
-    ui.emailSendFailure()
+    ui.emailSendFailure('<strong>Sorry, it seems that my mail server is not responding. Please try again later!')
   })
 }
 
