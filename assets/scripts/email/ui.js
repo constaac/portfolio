@@ -1,10 +1,10 @@
 'use strict'
 
 const resetForm = function () {
-  $('#name').val('')
-  $('#email').val('')
-  $('#phone').val('')
-  $('#message').val('')
+  $('#name').value = ''
+  $('#email').value = ''
+  $('#phone').value = ''
+  $('#message').value = ''
 }
 
 const emailSendSuccess = function (response) {
