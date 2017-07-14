@@ -1,5 +1,12 @@
 'use strict'
 
+const resetForm = function () {
+  $('#name').val('')
+  $('#email').val('')
+  $('#phone').val('')
+  $('#message').val('')
+}
+
 const emailSendSuccess = function (response) {
   // Enable button & show success message
   $('#success').html("<div class='alert alert-success'>")
@@ -16,6 +23,7 @@ const emailSendSuccess = function (response) {
 
   // clear all fields
   $('#contactForm').trigger('reset')
+  resetForm()
   $('.floating-label-form-group').removeClass('floating-label-form-group-with-value')
   $('#btnSubmit').attr('disabled', false)
 }
