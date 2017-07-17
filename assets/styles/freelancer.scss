@@ -194,7 +194,7 @@ section.success {
 #portfolio .portfolio-item .portfolio-link {
   display: block;
   position: relative;
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
 }
 #portfolio .portfolio-item .portfolio-link .caption {
@@ -208,7 +208,7 @@ section.success {
   -moz-transition: all ease 0.5s;
 }
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-  opacity: 1;
+  opacity: .3;
 }
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
   position: absolute;
@@ -537,6 +537,13 @@ div #maincontent {
   width: 125px;
   display: block;
   margin: 25px auto;
+}
+.img-portfolio-main {
+  height: 320px;
+  margin: 0 auto;
+}
+.img-modal {
+  max-height: 350px;
 }
 // .experiece-text {
 //   line-height:
