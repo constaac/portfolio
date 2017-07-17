@@ -305,9 +305,10 @@ footer .footer-below {
   color: white;
   font-size: 20px;
   border: solid 2px white;
-  background: #8BB8E4;
+  // background: #8BB8E4;
   transition: all 0.3s ease-in-out;
   margin-top: 15px;
+  opacity: .7;
 }
 .btn-outline:hover,
 .btn-outline:active,
@@ -315,6 +316,7 @@ footer .footer-below {
   color: white;
   background: #2C3E50;
   border: solid 2px white;
+  opacity: 1;
 }
 .btn-outline:focus {
   color: white;
