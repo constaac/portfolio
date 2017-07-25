@@ -547,6 +547,19 @@ div #maincontent {
 .img-modal {
   max-height: 350px;
 }
-// .experiece-text {
-//   line-height:
-// }
+.email-title {
+  font-weight: normal;
+}
+.email-link {
+  color: white;
+}
+.email-link:hover {
+  color: rgb(203, 203, 203);
+  text-decoration: underline;
+}
+.email-link:active,
+.email-link:visited,
+ .email-link:focus {
+  color: white;
+  text-decoration: underline;
+}
